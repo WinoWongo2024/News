@@ -57,19 +57,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow-x: auto;
 }
 
 .nav-menu {
   display: flex;
   gap: 1rem;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-item {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: var(--text-light);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -85,7 +89,7 @@ body {
 }
 
 .header .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -157,12 +161,12 @@ body {
 .news-item img {
   width: 100%;
   height: auto;
-  max-height: 200px; /* Constrain the image height */
-  object-fit: contain; /* Maintain aspect ratio */
+  max-height: 150px; /* Constrain the image height */
+  object-fit: cover; /* Maintain aspect ratio */
 }
 
 .news-item-content {
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .news-item h2 {
@@ -223,7 +227,7 @@ body {
   }
 
   .news-item img {
-    max-height: 150px; /* Further constrain image height on smaller screens */
+    max-height: 130px; /* Further constrain image height on smaller screens */
   }
 
   .news-item h2 {
@@ -232,5 +236,9 @@ body {
 
   .news-item p {
     font-size: 0.85rem;
+  }
+
+  .navbar {
+    overflow-x: auto;
   }
 }
