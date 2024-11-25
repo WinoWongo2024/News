@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Velis News Network (VNN)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li class="nav-item">North
+        <ul class="dropdown">
+          <li>Northern Frontier</li>
+          <li>Silvercrest Mountains</li>
+        </ul>
+      </li>
+      <li class="nav-item">South
+        <ul class="dropdown">
+          <li>Sunridge Coast</li>
+          <li>Velis Valley</li>
+        </ul>
+      </li>
+      <li class="nav-item">East
+        <ul class="dropdown">
+          <li>Eastern Steppe</li>
+          <li>Halefort Industrial Zone</li>
+        </ul>
+      </li>
+      <li class="nav-item">West
+        <ul class="dropdown">
+          <li>Glenmoor Highlands</li>
+          <li>Lakeshore Province</li>
+        </ul>
+      </li>
+      <li class="nav-item">Central
+        <ul class="dropdown">
+          <li>New Corinth District</li>
+          <li>Midland Plains</li>
+        </ul>
+      </li>
+      <li class="nav-item">Nearby News</li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Velis News Network</h1>
+      <p class="tagline">Your Window to the Eastveil Republic</p>
+    </div>
+  </header>
+
+  <!-- Live Article Section -->
+  <section class="live-article">
+    <h2 class="live-indicator">🔴 Live</h2>
+    <div class="live-content">
+      <h2 id="liveTitle">Loading...</h2>
+      <p id="liveDescription">Please wait...</p>
+      <button id="readMoreLive" class="read-more">Read More</button>
+    </div>
+  </section>
+
+  <!-- Articles Grid -->
+  <main class="main">
+    <div id="newsContainer" class="news-grid">
+      <!-- Articles will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2024 Velis News Network. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

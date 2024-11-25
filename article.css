@@ -1,0 +1,219 @@
+/* Font-Face Definitions */
+@font-face {
+  font-family: 'BBCReithSerif';
+  src: url('fonts/BBCReithSerif_Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BBCReithSerif';
+  src: url('fonts/BBCReithSerif_Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BBCReithSerif';
+  src: url('fonts/BBCReithSerif_Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #0a84ff;
+  --secondary-color: #f4f4f9;
+  --text-color: #333333;
+  --text-light: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BBCReithSerif', sans-serif;
+  font-weight: 300;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--text-light);
+  box-shadow: 0 2px 8px var(--card-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'BBCReithSerif', serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: 'BBCReithSerif', serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-light);
+  transition: color var(--transition-speed);
+}
+
+.nav-link:hover {
+  color: #d1e8ff;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background-color: var(--text-light);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  list-style: none;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 0.5rem 0;
+}
+
+.dropdown li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Article Main Content */
+.article-main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: var(--text-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  animation: fadeIn var(--transition-speed) ease-in-out;
+}
+
+.article-page h1 {
+  font-family: 'BBCReithSerif', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.article-page img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.article-page p {
+  font-family: 'BBCReithSerif', serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-family: 'BBCReithSerif', serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed);
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px var(--card-shadow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .article-main {
+    padding: 1.5rem;
+  }
+
+  .article-page h1 {
+    font-size: 2rem;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+  }
+}
