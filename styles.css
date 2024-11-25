@@ -170,7 +170,7 @@ body {
 /* Articles Grid */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
 }
@@ -190,8 +190,8 @@ body {
 
 .news-item img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  max-height: 180px; /* Constrain the image height */
+  object-fit: cover; /* Maintain aspect ratio */
 }
 
 .news-item-content {
