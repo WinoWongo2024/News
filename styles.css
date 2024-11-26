@@ -1,5 +1,5 @@
 /* Apply styles only to iPhone 15 Pro Max */
-@media only screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+/*@ and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
   /* Font-Face Definitions */
   @font-face {
     font-family: 'BBCReithSerif';
