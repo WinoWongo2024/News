@@ -129,6 +129,8 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color var(--transition-speed);
+  display: inline-block; /* Prevents full-width stretching */
+  text-align: center;
 }
 
 .read-more:hover {
@@ -138,7 +140,7 @@ body {
 /* Articles Grid */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
   gap: 1rem;
   padding: 1rem;
 }
@@ -149,6 +151,7 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 4px var(--card-shadow);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin: 0 auto;
 }
 
 .news-item:hover {
@@ -157,11 +160,11 @@ body {
 }
 
 .news-item img {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Ensure images don't exceed their container's width */
-  max-height: 200px; /* Constrain height to maintain aspect ratio */
-  object-fit: cover;
+  width: 100%; /* Image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Constrain maximum height */
+  object-fit: cover; /* Crop to fit without distortion */
+  border-radius: var(--border-radius); /* Consistent rounded corners */
 }
 
 .news-item-content {
@@ -222,7 +225,7 @@ body {
   }
 
   .news-item img {
-    max-height: 150px; /* Reduce height for smaller screens */
+    max-height: 130px; /* Further constrain image height on smaller screens */
   }
 
   .news-item h2 {
